@@ -146,6 +146,11 @@ body {
     background-color: #A65B05;
 }
 
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .content-box, .content-box2 {
@@ -229,94 +234,4 @@ body {
     }
 }
 
-
-
-
-/* @media (max-width: 1024px) {
-    .content-box {
-        max-width: 50%; 
-    }
-    .texte p {
-        max-width: 80%;
-        padding: 30px; 
-    }
-} */
-
-/* @media (max-width: 768px) { */
-    /* .Menu {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    nav img {
-        width: 50px; /* Réduire la taille du logo */
-    /* } */ 
-
-    /* #menu {
-        height:auto; */
-        /* Pour annuler la hauteur forcée que l'on a donné par défaut au menu (et lui permettre d'afficher toutes les rubriques correctement) */
-        /* align-items: flex-start; Plus besoin de centrage vertical, tout peut être calé en haut du menu
-    } */
-
-    /* #menu ul {
-        display:none; /* Le contenu du menu est masqué par défaut... */
-        /* flex-direction: column; ...et lorsqu'il sera affiché, il doit se présenter verticalement */ 
-        /* margin:20px 0px; 2 valeurs : top & bottom puis left & right */
-    /* } */
-
-    /* #menu.visible ul {
-        display:flex; /* Pour annuler display:none donc le masquage */
-    /* }  */
-
-    /* #menu button {
-        display:block; Pour annuler display:none donc le masquage
-    } */
-/* 
-    #menu.visible button {
-        margin-top:15px;
-    }
-
-    .content-box {
-        max-width: 70%;
-        padding: 15px;
-    }
-
-    .texte p {
-        font-size: 14px;
-        padding: 20px; /* Espacement réduit */
-    /* }
-
-    .cta-button {
-        font-size: 14px;
-        padding: 8px 16px; Bouton plus petit
-    }
-}  */
-
-/* @media (max-width: 480px) {
-    .Menu {
-        flex-direction: row;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .content-box {
-        max-width: 90%;
-        margin: 0 auto; 
-        padding: 10px;
-    }
-
-    .content-box h2 {
-        font-size: 18px;
-    }
-
-    .content-box p {
-        font-size: 14px;
-        margin-bottom: 15px;
-    }
-
-    .cta-button {
-        font-size: 12px;
-        padding: 6px 12px;
-    }
-} */
 
