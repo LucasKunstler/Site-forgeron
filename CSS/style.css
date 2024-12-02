@@ -71,149 +71,112 @@ nav a {
     color: whitesmoke;
 } */
 
+/* Styles de base */
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
 .container {
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 20px; */
+    box-sizing: border-box;
+}
+
+.background-image,
+.background-image2,
+.background-image3 {
     position: relative;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-/* Image de fond */
-.background-image {
-    width: 100%;
-    height: 100%;
-    background-image: url('../Image/blacksmith-medieval.jpg'); /* Remplacez par le chemin de votre image */
+    min-height: 50vh;
+    padding: 50px 20px;
     background-size: cover;
     background-position: center;
-    display: flex; /* Utilisation de flexbox */
-    align-items: center; /* Centré verticalement */
-    justify-content: flex-end; /* Aligner à droite */
-}
-
-.texte p {
     color: white;
-    max-width: 60%;
-    padding: 50px;
+    text-align: center;
 }
 
-/* Boîte blanche */
-.content-box {
-    background-color: rgba(255, 255, 255, 0.9);
+.background-image {
+    background-image: url('../Image/blacksmith-medieval.jpg');
+}
+
+.background-image2 {
+    background-image: url('../Image/Formation.jpg');
+}
+
+.background-image3 {
+    background-image: url('../Image/Stream\ et\ vidéos.jpg');
+}
+
+/* Texte général */
+.texte {
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Boîte blanche avec contenu */
+.content-box, .content-box2 {
+    background: rgba(255, 255, 255, 0.9);
     color: #000;
     padding: 20px;
-    border-radius: 5px;
-    max-width: 35%;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-right: 10px; /* Garantir aucune collision avec le padding */
-    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.content-box2 {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #000;
-    padding: 20px;
-    border-radius: 5px;
-    width: 25%;
-    min-height: 30vh;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-right: 10px;
-}
-
-/* Titre */
-.content-box h2 {
-    margin-top: 0;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* Texte */
-.content-box p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-/* Bouton */
+/* Bouton CTA */
 .cta-button {
     display: inline-block;
-    background-color: #D1783F; /* Couleur orange pour le bouton */
-    color: #fff;
     padding: 10px 20px;
+    background-color:#A65B05 ;
+    color: white;
     text-decoration: none;
-    border-radius: 3px;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
 }
 
 .cta-button:hover {
-    background-color: #b26130;
+    background-color: #A65B05;
 }
 
-.background-image2{
-    width: 100%;
-    height: 100%;
-    background-image: url('../Image/Formation.jpg'); /* Remplacez par le chemin de votre image */
-    background-size: cover;
-    background-position: center;
-    display: flex; /* Utilisation de flexbox */
-    align-items: center; /* Centré verticalement */
-    justify-content: center; /* Aligner à droite */
-}
-
-.background-image3{
-    width: 100%;
-    height: 100%;
-    background-image: url('../Image/Stream\ et\ vidéos.jpg'); /* Remplacez par le chemin de votre image */
-    background-size: cover;
-    background-position: center;
-    display: flex; /* Utilisation de flexbox */
-    align-items: center; /* Centré verticalement */
-    justify-content: space-evenly; 
-}
-
-footer{
-    background-color: #000000;
-}
-
-footer p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    height: 50px;
-}
-
-footer a {
-    text-decoration: none;
-    color: white;
-}
-
-
-
-
+/* Responsive Design */
 @media (max-width: 1024px) {
-    .content-box {
-        max-width: 50%; /* Réduire la taille de la boîte */
+    .content-box, .content-box2 {
+        margin: 15px;
     }
-    .texte p {
-        max-width: 80%;
-        padding: 30px; /* Réduire les marges */
+
+    .background-image,
+    .background-image2,
+    .background-image3 {
+        padding: 30px 10px;
     }
 }
 
 @media (max-width: 768px) {
-    /* .Menu {
-        flex-direction: row;
-        align-items: center;
+    .content-box, .content-box2 {
+        margin: 10px;
+        padding: 15px;
     }
 
-    nav img {
-        width: 50px; /* Réduire la taille du logo */
-    /* } */ 
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
 
     #menu {
         height:auto;
@@ -238,6 +201,80 @@ footer a {
     #menu.visible button {
         margin-top:15px;
     }
+}
+
+@media (max-width: 480px) {
+
+    .Menu {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .texte {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+
+    .cta-button {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+
+
+
+
+/* @media (max-width: 1024px) {
+    .content-box {
+        max-width: 50%; 
+    }
+    .texte p {
+        max-width: 80%;
+        padding: 30px; 
+    }
+} */
+
+/* @media (max-width: 768px) { */
+    /* .Menu {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav img {
+        width: 50px; /* Réduire la taille du logo */
+    /* } */ 
+
+    /* #menu {
+        height:auto; */
+        /* Pour annuler la hauteur forcée que l'on a donné par défaut au menu (et lui permettre d'afficher toutes les rubriques correctement) */
+        /* align-items: flex-start; Plus besoin de centrage vertical, tout peut être calé en haut du menu
+    } */
+
+    /* #menu ul {
+        display:none; /* Le contenu du menu est masqué par défaut... */
+        /* flex-direction: column; ...et lorsqu'il sera affiché, il doit se présenter verticalement */ 
+        /* margin:20px 0px; 2 valeurs : top & bottom puis left & right */
+    /* } */
+
+    /* #menu.visible ul {
+        display:flex; /* Pour annuler display:none donc le masquage */
+    /* }  */
+
+    /* #menu button {
+        display:block; Pour annuler display:none donc le masquage
+    } */
+/* 
+    #menu.visible button {
+        margin-top:15px;
+    }
 
     .content-box {
         max-width: 70%;
@@ -247,15 +284,15 @@ footer a {
     .texte p {
         font-size: 14px;
         padding: 20px; /* Espacement réduit */
-    }
+    /* }
 
     .cta-button {
         font-size: 14px;
-        padding: 8px 16px; /* Bouton plus petit */
+        padding: 8px 16px; Bouton plus petit
     }
-}
+}  */
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .Menu {
         flex-direction: row;
         align-items: center;
@@ -264,7 +301,7 @@ footer a {
 
     .content-box {
         max-width: 90%;
-        margin: 0 auto; /* Centrer sur petits écrans */
+        margin: 0 auto; 
         padding: 10px;
     }
 
@@ -281,5 +318,5 @@ footer a {
         font-size: 12px;
         padding: 6px 12px;
     }
-}
+} */
 
