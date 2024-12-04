@@ -243,7 +243,69 @@ footer {
     
 }
 
-/* Formation */
+/* Contact */
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    color: white;
+    
+  }
+  
+  form {
+    flex: 1;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 5px;
+    
+  }
+  
+  form textarea {
+    height: 100px;
+  }
+  
+  .consent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .upload-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .upload-container button {
+    background-color: #8b4513;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .upload-container button:hover {
+    background-color: #a0522d;
+  }
 
 
 /* Responsive Design */
@@ -258,6 +320,8 @@ footer {
         padding: 30px 10px;
     }
 }
+
+
 
 @media (max-width: 768px) {
     .content-box, .content-box2 {
@@ -315,6 +379,15 @@ footer {
         width: 90%; /* Occupy more width on smaller screens */
     }
 
+    .form-container {
+        flex-direction: column;
+        padding: 20px;
+      }
+    
+      form,
+      .upload-container {
+        flex: 1 1 100%;
+      }
       
 }
 
@@ -363,6 +436,35 @@ footer {
     header nav ul li a {
         font-size: 14px;
     }
+
+    .form-container {
+        width: 100%;
+        padding: 15px;
+      }
+    
+      form label,
+      form input,
+      form textarea,
+      .upload-container label,
+      .upload-container input {
+        font-size: 0.9rem; /* Réduit la taille des polices pour les petits écrans */
+      }
+    
+      form input,
+      form textarea {
+        padding: 8px; /* Réduit le padding pour que tout tienne sur un petit écran */
+      }
+    
+      .upload-container button {
+        padding: 8px;
+        font-size: 0.9rem;
+      }
+    
+      .consent {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
 }
 
 
