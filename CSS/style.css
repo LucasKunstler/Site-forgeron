@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #menu {
@@ -44,10 +45,6 @@ body{
   }
   
 /* Styles de base */
-body {
-    margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-}
 
 .container {
     width: 100%;
@@ -245,6 +242,8 @@ footer {
     padding: 10px 0;
     
 }
+
+/* Formation */
 
 
 /* Responsive Design */
