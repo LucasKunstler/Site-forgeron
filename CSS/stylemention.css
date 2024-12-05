@@ -6,12 +6,53 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
     color: #333;
     line-height: 1.6;
     
 }
+
+#menu {
+    background-color:#A65B05;
+      height:70px;
+      display:flex;
+      align-items:center;
+  }
+  
+  #menu ul {
+      display:flex;
+      justify-content:center;
+      width:100%;
+      margin:0;
+      padding:0;
+      list-style: none;
+      gap:40px;
+      font-size:22px;
+  }
+  
+  #menu a {
+      color:whitesmoke;
+      text-decoration:none;
+  }
+  
+  /* Bouton "burger" */
+  #menu button {
+      width:100px;
+      flex-shrink:0;
+      background-color:transparent;
+      border:none;
+    /* Masqué par défaut, n'apparaît que sous le seuil des 900px */
+      transition:margin-top 0.5s;
+  }
+  
+  /* #menu button img {
+      width:100%;
+  } */
+
+  img{
+    width: 50px;
+  }
 
 .container {
     max-width: 900px;
@@ -105,4 +146,29 @@ nav a {
         font-size: 1.3em;
     }
 
+    #menu {
+        height:auto;
+        /* Pour annuler la hauteur forcée que l'on a donné par défaut au menu (et lui permettre d'afficher toutes les rubriques correctement) */
+        align-items: flex-start; /* Plus besoin de centrage vertical, tout peut être calé en haut du menu */
+    }
+    
+    #menu ul {
+        display:none; /* Le contenu du menu est masqué par défaut... */
+        flex-direction: column; /* ...et lorsqu'il sera affiché, il doit se présenter verticalement */
+        margin:20px 0px; /* 2 valeurs : top & bottom puis left & right */
+    }
+    
+    #menu.visible ul {
+        display:flex; /* Pour annuler display:none donc le masquage */
+    }
+    
+    #menu button {
+        display:block; /* Pour annuler display:none donc le masquage */
+    }
+    
+    #menu.visible button {
+        margin-top:15px;
+    }
+
 }
+

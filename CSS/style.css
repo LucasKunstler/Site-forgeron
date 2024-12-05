@@ -60,7 +60,8 @@ body{
     position: relative;
     width: 100%;
     min-height: 50vh;
-    padding: 50px 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-size: cover;
     background-position: center;
     color: white;
@@ -209,7 +210,7 @@ footer a{
 
 main h1 {
     margin: 0;
-    font-size: 50px;
+    font-size: 40px;
     color: white;
     
 }
@@ -287,7 +288,6 @@ footer {
     gap: 20px;
     padding-top: 20px;
     padding-left: 20px;
-    width: 100%;
     height: 100vh;
     background-color: #000;
     color: white;
@@ -350,12 +350,6 @@ footer {
 @media (max-width: 1024px) {
     .content-box, .content-box2 {
         margin: 15px;
-    }
-
-    .background-image,
-    .background-image2,
-    .background-image3 {
-        padding: 30px 10px;
     }
 }
 
